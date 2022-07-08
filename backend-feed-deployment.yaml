@@ -5,7 +5,7 @@ metadata:
     app: backend-feed
   name: backend-feed
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: backend-feed
@@ -15,15 +15,15 @@ spec:
         app: backend-feed
     spec:
       containers:
-      - image: 419440/udagram-api-feed:v3
-        name: backend-feed
-        imagePullPolicy: Always
-        resources:
-          requests:
-            memory: "1000Mi"
-            cpu: "250m"
-          limits:
-            memory: "2000Mi"
-            cpu: "500m"   
-        ports:
-        - containerPort: 8080
+        - image: 419440/udagram-api-feed:v3
+          name: backend-feed
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "1000Mi"
+              cpu: "250m"
+            limits:
+              memory: "2000Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
