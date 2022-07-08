@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  # AWS_BUCKET: arn:aws:s3:::udacity-dev-p3
+  AWS_BUCKET: arn:aws:s3:::refactor-project-11073073901
+  AWS_PROFILE: default
+  # AWS_REGION: us-east-1
+  AWS_REGION: us-east-1
+  JWT_SECRET: testing
+  POSTGRES_DB: postgres
+  # POSTGRES_HOST: udacitydevp3.croizp0bgh6q.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: db1.ctz3get8unid.us-east-1.rds.amazonaws.com
+  URL: http://localhost:8080
+  PORT: "8080"
+metadata:
+  name: env-config
